@@ -1,0 +1,48 @@
+.menu {
+  position: relative;
+}
+
+.menu__list {
+  display: none;
+  width: 325px;
+  position: absolute;
+  top: 50px;
+  right: -15px;
+  z-index: 10;
+}
+
+.menu__btn {
+  margin-left: 35px;
+  width: 40px;
+  height: 40px;
+  background-image: url(../img/icon-menu.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40px 33px;
+}
+
+.menu--opened {
+  .menu__btn {
+    background-image: url(../img/icon-shutdown.png);
+    background-size: 33px 33px;
+  }
+  
+  .menu__list {
+    display: block;
+  }
+}
+
+.menu__link {
+  display: block;
+  font-size: 36px;
+  color: #fff;
+  text-align: center;
+  padding: 10px 5px;
+  width: 100%;
+  min-height: 60px;
+  
+  &:hover,
+  &:active {
+    background-color: rgb(53, 53, 53);
+  }
+}
