@@ -1,6 +1,6 @@
 var navMain = document.querySelector(".menu");
 var navToggle = document.querySelector(".menu__btn");
-var overlay = document.querySelector(".header");
+var overlay = document.querySelector(".promo__overlay");
 
 navToggle.addEventListener("click", function() {
   if (navMain.classList.contains("menu--closed")) {

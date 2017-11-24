@@ -8,6 +8,7 @@
 </head>
 <body>
   <section class="promo">
+    <div class="promo__overlay"></div>
     <header class="header wrapper">
       <div class="header__block header__block--left">
         <div class="header__wrap">
@@ -81,10 +82,10 @@
       </form>
       <p class="promo__slogan">Мы против спама. Мы против лишних звонков. Мы за доверие</p>
     </div>
-    <button type="button" class="promo__next" title="Далее"></button>
+    <a href="#next" class="promo__next" title="Далее"></a>
   </section>
   
-  <section class="special">
+  <section class="special" id="next">
     <div class="form1"></div>
     
     <div class="swiper-container slider">
@@ -366,16 +367,29 @@
     <a href="#" class="pagination__nav pagination--next"></a>
   </nav>
   
+  <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/swiper.min.js"></script>
   <script src="js/script.js"></script>
   
-  <!-- Slider -->
+<!-- Slider -->
   <script>
     var swiper = new Swiper('.swiper-container', {
       slidesPerView: "auto",
       loop: true,
       nextButton: ".swiper-button-next",
       prevButton: ".swiper-button-prev",
+    });
+  </script>
+  
+<!-- Scroll to anchor -->
+  <script>
+    $(document).ready(function(){
+      $(".promo").on("click","a", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+          top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 500);
+      });
     });
   </script>
 </body>
