@@ -1127,20 +1127,22 @@ button.swiper-pagination-bullet {
 .call__btn:active {
   opacity: 0.8;
 }
-.slider__img {
+.slider {
   width: 100%;
+  background-image: url(../img/bg-2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .slider__slide {
   width: 100%;
+  min-height: 950px;
   overflow: hidden;
   position: relative;
 }
 .slider__title {
   width: 100%;
-  position: absolute;
-  top: 180px;
-  left: 50%;
-  transform: translateX(-50%);
+  padding-top: 180px;
   text-align: center;
   color: #fff;
 }
@@ -1196,7 +1198,7 @@ button.swiper-pagination-bullet {
 .slider__prev {
   width: 36px;
   height: 36px;
-  top: 34%;
+  top: 30%;
   background-image: url(../img/icon-arrow-next.png);
   background-repeat: no-repeat;
   background-size: contain;
@@ -1210,7 +1212,6 @@ button.swiper-pagination-bullet {
   right: calc(50% - 765px);
 }
 .country {
-  margin-top: -60px;
   padding-bottom: 60px;
   color: #505050;
   background-image: url(../img/bg-3.jpg);
@@ -1284,7 +1285,7 @@ button.swiper-pagination-bullet {
   opacity: 1;
 }
 .tour {
-  padding-top: 100px;
+  padding-top: 95px;
   padding-bottom: 27px;
   border-bottom: 1px solid #f3f3f3;
 }
@@ -1365,7 +1366,46 @@ button.swiper-pagination-bullet {
 .tour__info {
   width: 100%;
   min-height: 290px;
+  padding-top: 35px;
+  padding-bottom: 20px;
   border: 1px solid #dddddd;
+}
+.tour__btn {
+  display: block;
+  margin: 0 auto;
+  width: 210px;
+  min-height: 45px;
+  line-height: 45px;
+  text-align: center;
+  color: #5ccf2f;
+  font-size: 20px;
+  font-weight: 600;
+  border: 3px solid #5ccf2f;
+  border-radius: 30px;
+}
+.tour__btn:hover,
+.tour__btn:active {
+  opacity: 0.8;
+}
+.tour__line {
+  padding-left: 30px;
+  display: -ms-flexbox;
+  display: flex;
+}
+.tour__rating,
+.tour__dynamic,
+.tour__dbl,
+.tour__date,
+.tour__period {
+  margin-top: 0;
+  margin-bottom: 11px;
+  width: 125px;
+  padding-right: 10px;
+}
+.tour__wrap {
+  width: 100%;
+  padding-top: 20px;
+  border-top: 1px solid #f3f3f3;
 }
 .pagination {
   padding-top: 5px;
@@ -1483,6 +1523,9 @@ button.swiper-pagination-bullet {
   .promo__comment {
     font-size: 24px;
   }
+  .slider__slide {
+    min-height: 700px;
+  }
   .slider__title {
     top: 100px;
   }
@@ -1581,6 +1624,9 @@ button.swiper-pagination-bullet {
   .promo__h1 {
     font-size: 30px;
   }
+  .slider__slide {
+    min-height: 500px;
+  }
   .slider__title {
     top: 40px;
   }
@@ -1640,6 +1686,9 @@ button.swiper-pagination-bullet {
   }
   .tour__name {
     max-width: 100%;
+  }
+  .tour__line {
+    padding-left: 10px;
   }
   .pagination {
     -ms-flex-wrap: wrap;
