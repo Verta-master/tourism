@@ -1,9 +1,12 @@
 .promo {
   min-height: 1283px;
-  background-image: url(../img/bg-1.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  position: relative;
+  background-image:
+    linear-gradient(to top, #fff, rgba(255,255,255,0)),
+    url(../img/bg-1.jpg);
+  background-size: 100% 465px, cover;
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom, center;
 }
 
 .promo__title {
@@ -28,4 +31,17 @@
 .promo__slogan {
   color: #b2b2b2;
   font-size: 16px;
+}
+
+.promo__next {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 34px;
+  height: 34px;
+  background-image: url(../img/icon-expand-arrow.png);
+  background-repeat: no-repeat;
+  background-size: 34px 18px;
+  background-position: center;
 }
